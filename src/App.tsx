@@ -11,6 +11,8 @@ import Wilderness from "./pages/Wilderness/Wilderness.tsx";
 import Createmerge from "./pages/Createmerge/Createmerge.tsx";
 
 function App() {
+  console.log("upstream url: ", process.env.REACT_APP_API_URL);
+
   return (
     <>
       <Router>

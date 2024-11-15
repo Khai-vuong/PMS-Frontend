@@ -1,0 +1,137 @@
+/* #root{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(./logoo.jpg);
+} */
+
+/* Bro đừng chỉnh root chứ, chỉnh cục bộ bên ô thôi */
+* {
+    box-sizing: border-box;
+    /* Áp dụng cho tất cả các phần tử để đảm bảo kích thước hợp lý */
+}
+
+.success {
+    width: 350px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #0056b3;
+    color: white;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.gohome a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(./logoo.jpg);
+
+
+}
+
+.table {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.create {
+    font-size: 200%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: #0056b3;
+}
+
+form {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+form label {
+    display: flex;
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+form input {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+#back,
+input[type="submit"] {
+    appearance: none;
+    width: 30%;
+    margin-top: 35px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    /* Để căn giữa nội dung */
+    align-items: center;
+    background-color: #0056b3;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: opacity 0.1s;
+    text-decoration: none;
+    /* Bỏ gạch chân mặc định của thẻ <a> */
+    padding: 10px;
+    /* Tạo khoảng cách giống nhau */
+    border-radius: 6px;
+    /* Đảm bảo cả hai cùng bo góc */
+    box-sizing: border-box;
+    /* Đảm bảo padding được tính vào kích thước */
+}
+
+#back:active,
+input[type="submit"]:active {
+    opacity: 0.7;
+}
+
+#back:hover,
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+.buttons {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}

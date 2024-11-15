@@ -1,0 +1,23 @@
+.container-wilderness {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./Backrooms-bg.jpg');
+    background-size: cover;
+    /* Make the background image cover the entire container */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent the background image from repeating */
+}
+
+.content-wilderness {
+    text-align: center;
+    color: black;
+}
+
+.content-wilderness h1 {
+    color: black;
+}

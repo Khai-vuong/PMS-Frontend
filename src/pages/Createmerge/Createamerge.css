@@ -1,0 +1,81 @@
+* {
+  color: #000000 !important; /* Set all text color to black */
+}
+
+.createmerge-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #e0f2ff;
+  min-height: 100vh;
+}
+
+.createmerge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3366cc;
+  padding: 10px 20px;
+}
+
+.username {
+  font-size: 1.2em;
+}
+
+.user-image {
+  width: 30px; /* Set a smaller width */
+  height: 30px; /* Set a smaller height */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.createmerge-title {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.createmerge-form {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #b3d1ff;
+  background-color: #a9d3ff;
+}
+
+.file-upload {
+  border: 2px solid #003366;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #f1f9ff;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #3366cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white; /* Keeping the button text white for better contrast */
+}
+
+.submit-button:hover {
+  background-color: #274b99;
+}

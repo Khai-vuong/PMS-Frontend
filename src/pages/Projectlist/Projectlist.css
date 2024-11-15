@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    /* Áp dụng cho tất cả các phần tử để đảm bảo kích thước hợp lý */
+}
+h1{
+    color: rgb(241, 117, 34);
+}
+.container-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color:  #0056b3;
+}   
+table {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 800px;
+    margin: 10px auto;
+    border-radius: 10px; /* Adds a 10px radius to the table corners */
+    overflow: hidden; 
+}
+table thead {
+    color: rgb(255, 255, 255);
+}
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+table th {
+    background-color: #000000;
+}
+table th:first-child, td:first-child, /* Name column */
+table th:nth-child(2),td:nth-child(2) { /* Position column */
+  text-align: left;
+}
+table th:nth-child(3),td:nth-child(3), /* Model column */
+table th:nth-child(4),td:nth-child(4) { /* Phase column */
+  text-align: right;
+}
+
+.create-button a {
+    margin-left: 680px;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 10px; /* Tùy chỉnh khoảng cách bên trong */
+    border: 2px solid #000; /* Đường viền 2px màu đen */
+    border-radius: 5px; /* Góc bo tròn */
+    color: #000; /* Màu chữ */
+    font-weight: bold; /* Chữ đậm */
+    background-color: #f9f9f9; /* Màu nền */
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+}
+
+.create-button a:hover {
+    background-color: #e0e0e0; /* Đổi màu nền khi hover */
+}

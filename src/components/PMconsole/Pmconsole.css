@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pm-container{
+    width: 600px;
+    height: 300px;
+    background-color: rgb(74, 115, 221);
+    position: relative;
+}
+.authorize {
+    padding: 8px 15px;
+    border-radius: 12px;
+    background-color: rgb(145, 61, 210);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Vị trí cho các nút bên phải */
+.right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Styling cho các nút bên trong .right-buttons */
+.pm-create, .next-phase {
+    padding: 8px 15px;
+    border-radius: 12px;
+    background-color: rgb(145, 61, 210);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}

@@ -2,9 +2,7 @@
     box-sizing: border-box;
     /* Áp dụng cho tất cả các phần tử để đảm bảo kích thước hợp lý */
 }
-h1{
-    color: rgb(241, 117, 34);
-}
+
 .container-list{
     position: absolute;
     top: 0;
@@ -17,6 +15,7 @@ h1{
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     background-color:  #0056b3;
+    padding-top: 80px;
 }   
 table {
     width: 100%;
@@ -39,7 +38,7 @@ table td {
 }
 
 table th {
-    background-color: #000000;
+    background-color: #d5d5d5;
 }
 table th:first-child, td:first-child, /* Name column */
 table th:nth-child(2),td:nth-child(2) { /* Position column */

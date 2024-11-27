@@ -1,17 +1,25 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Createtask.css";
+import Header from "../../components/Header/Header";
 
 const CreateTask: React.FC = () => {
   const [taskName, setTaskName] = useState("");
   const [description, setDescription] = useState("");
   const [assignee, setAssignee] = useState("");
   const [dueDate, setDueDate] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const token = "";
-    const url = "";
+    const token = localStorage.getItem("token");
+    const url = "http://localhost:4000/api/tasks";
+
+    if (!token) {
+      alert("You must be logged in to create a task.");
+      return;
+    }
 
     const taskData = {
       taskName,
@@ -21,29 +29,28 @@ const CreateTask: React.FC = () => {
     };
 
     try {
-      const response = await fetch(url, {
-        method: "POST",
+      const response = await axios.post(url, taskData, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(taskData),
       });
 
-      if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      console.log("Task created successfully:", data);
+      console.log("Task created successfully:", response.data);
       alert("Task created successfully!");
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while creating the task.");
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(err.response?.data.message || "An error occurred");
+      } else {
+        setError("An unexpected error occurred.");
+      }
+      console.error("Error:", err);
     }
   };
 
   return (
+    <>
+    <Header/>
     <div className="create-task-page">
       <header className="header">
         <img src="path/to/logo.png" alt="Logo" className="logo" />
@@ -94,7 +101,10 @@ const CreateTask: React.FC = () => {
           Create Task
         </button>
       </form>
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
+    </>
   );
 };
 

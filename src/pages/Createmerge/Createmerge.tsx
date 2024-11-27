@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Createamerge.css";
+import Header from "../../components/Header/Header";
 
 const Createmerge: React.FC = () => {
   const [taskName, setTaskName] = useState("");
   const [comment, setComment] = useState("");
   const [files, setFiles] = useState<File[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -15,39 +18,43 @@ const Createmerge: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const token = ""; 
-    const url = ""; 
+    const token = localStorage.getItem("token") || "";
+    const url = "http://localhost:4000/api/merge";
 
-    // Prepare the form data
+    if (!token) {
+      alert("You must be logged in to submit the request.");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("taskName", taskName);
     formData.append("comment", comment);
     files.forEach((file, index) => {
-      formData.append(`file${index}`, file); // Append each file
+      formData.append(`file${index}`, file);
     });
 
     try {
-      const response = await fetch(url, {
-        method: "POST",
+      const response = await axios.post(url, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        body: formData,
       });
 
-      if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
+      console.log("Success:", response.data);
+      alert("Merge request submitted successfully!");
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(err.response?.data.message || "An error occurred");
+      } else {
+        setError("An unexpected error occurred.");
       }
-
-      const data = await response.json();
-      console.log("Success:", data);
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while submitting the request.");
+      console.error("Error:", err);
     }
   };
 
   return (
+    <>
+    <Header inforName="Dương Trọng Khôi"/>
     <div className="createmerge-container">
       <header className="createmerge-header">
         <img src="path_to_logo" alt="logo" className="logo" />
@@ -88,7 +95,9 @@ const Createmerge: React.FC = () => {
           Submit
         </button>
       </form>
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
+    </>
   );
 };
 

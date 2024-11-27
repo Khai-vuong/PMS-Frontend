@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProjectsListDto } from "../../../DTOs/project-list.dto"
+import Header from "../../components/Header/Header";
 
 axios.interceptors.request.use(
   (config) => {
@@ -37,20 +38,6 @@ const Projectlist = () => {
       });
   }, []);
 
-  // const handleProjectClick = (id: string | undefined) => {
-  //   if (id !== undefined) {
-  //     console.log("Project ID:", id);
-  //     axios
-  //       .get(`http://localhost:4000/projects/:${id}`)
-  //       .then((response) => {
-  //         console.log("Project details:", response.data);
-  //       })
-  //       .catch((error) => {
-  //         console.error("Lỗi khi lấy thông tin dự án:", error);
-  //       });
-  //   }
-  // };
-
   const handleProjectClick = (id: string | undefined) => {
     if (id !== undefined) {
       console.log("Project ID:", id);
@@ -62,6 +49,7 @@ const Projectlist = () => {
 
   return (
     <>
+    <Header inforName="Dương Trọng Khôi"/>
       <div className="container-list">
         <div className="title">
           <h1>Project List</h1>

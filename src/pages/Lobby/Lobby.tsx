@@ -70,7 +70,7 @@ const Lobby: React.FC = () => {
 
     const renderItem = (item: TaskDTO) => {
         return (
-            <div> {item.name}    {item.description}        {item.assignee}</div>
+            <div key={item.tid} className='taskItem-lobby'> {item.name}    {item.description}        {item.assignee}</div>
         );
     };
 
@@ -114,7 +114,7 @@ const Lobby: React.FC = () => {
                             <Pagination ListDTO={taskData || {totalItems: 0, itemsPerPage: 0, data: []}} 
                                         fetchPage={fetchPage}
                                         renderItem={renderItem}
-                                        keySelector={keySelector}/>
+                                        />
 
                         </div>
                     </div>

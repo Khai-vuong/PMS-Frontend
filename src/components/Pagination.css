@@ -1,7 +1,8 @@
 .pagination-controls {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     margin-top: 16px;
   }
   
@@ -10,6 +11,9 @@
     border: 1px solid #ccc;
     background-color: white;
     cursor: pointer;
+
+    color: black;
+    font-weight: bold;
   }
   
   .pagination-controls button.active {
@@ -23,3 +27,12 @@
     cursor: not-allowed;
   }
   
+  .pagination-currentPage {
+    width: 40px;
+    text-align: center;
+    text-size-adjust: 200%;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+  }

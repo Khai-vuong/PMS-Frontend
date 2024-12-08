@@ -1,0 +1,54 @@
+import React from "react";
+import "./Mail.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { MailDto } from "../../../DTOs/mail.dto"
+import MRbuttons from "../../components/MR-buttons/MRbuttons";
+import Header from "../../components/Header/Header";
+
+const Mail: React.FC = () => {
+    const [mails, setMails] = useState<MailDto[]>([]); 
+    
+    useEffect(() => {
+        axios
+          .get("/mails/init")
+          .then((response) => {
+             setMails(response.data); 
+          })
+          .catch((error) => {
+            console.error("Lỗi khi lấy dữ liệu:", error);
+          });
+      }, []);
+    const [content, setContent] = useState<string>(
+      "This is the content of the mail. If the category is MR, you will see the MR buttons."
+    );
+  
+    return (
+        <>
+        <Header inforName="Dương Trọng Khôi"/>
+            <div className="mail-container">
+           
+                <div className="mail-form">
+                <div className="mail-content">
+                    <label htmlFor="content">Mail:</label>
+                    <textarea
+                        id="content"
+                        value={content}
+                        readOnly
+                        rows={10}
+                        cols={50}
+                    />
+                </div>
+                {content.includes("MR") && (
+                    <div className="mr-buttons-container">
+                    <MRbuttons tid="12345" mrid="67890" />
+                    </div>
+                )}
+                </div>
+            </div>
+      </>
+    );
+  };
+  
+  
+export default Mail;

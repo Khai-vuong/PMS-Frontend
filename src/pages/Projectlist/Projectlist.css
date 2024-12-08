@@ -17,7 +17,7 @@
     background-color:  #0056b3;
     padding-top: 80px;
 }   
-table {
+.body-projectlist {
     width: 100%;
     border-collapse: collapse;
     max-width: 800px;
@@ -25,11 +25,11 @@ table {
     border-radius: 10px; /* Adds a 10px radius to the table corners */
     overflow: hidden; 
 }
-table thead {
-    color: rgb(255, 255, 255);
+.body-projectlist thead {
+    color: rgb(0, 0, 0);
 }
-table th,
-table td {
+.body-projectlist th,
+.body-projectlist td {
     padding: 12px;
     border: 1px solid #ddd;
     text-align: center;
@@ -37,31 +37,43 @@ table td {
     border: none;
 }
 
-table th {
+.body-projectlist th {
     background-color: #d5d5d5;
 }
-table th:first-child, td:first-child, /* Name column */
-table th:nth-child(2),td:nth-child(2) { /* Position column */
+.body-projectlist th:first-child, td:first-child, /* Name column */
+.body-projectlist th:nth-child(2),td:nth-child(2) { /* Position column */
   text-align: left;
 }
-table th:nth-child(3),td:nth-child(3), /* Model column */
-table th:nth-child(4),td:nth-child(4) { /* Phase column */
+.body-projectlist th:nth-child(3),td:nth-child(3), /* Model column */
+.body-projectlist th:nth-child(4),td:nth-child(4) { /* Phase column */
   text-align: right;
 }
 
-.create-button a {
+.create-button  {
     margin-left: 680px;
     margin-top: 10px;
     display: inline-block;
     padding: 10px 10px; /* Tùy chỉnh khoảng cách bên trong */
-    border: 2px solid #000; /* Đường viền 2px màu đen */
     border-radius: 5px; /* Góc bo tròn */
     color: #000; /* Màu chữ */
     font-weight: bold; /* Chữ đậm */
     background-color: #f9f9f9; /* Màu nền */
     transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+    cursor: pointer;
 }
 
-.create-button a:hover {
+.create-button:hover {
     background-color: #e0e0e0; /* Đổi màu nền khi hover */
+}
+.body-projectlist tbody tr {
+    cursor: pointer; /* Hiển thị con trỏ khi di chuột vào hàng */
+    transition: background-color 0.3s ease; /* Hiệu ứng mượt khi hover */
+}
+
+.body-projectlist tbody tr:hover {
+    box-shadow:  0 0 10px #1c64ff;
+}
+
+.projectItem-projectList:hover {
+    background-color: #d31e1e;
 }

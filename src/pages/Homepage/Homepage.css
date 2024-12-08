@@ -68,22 +68,30 @@
   text-align: center;
 }
 
-.body-homepage table {
+
+.members-homepage  {
+  min-width: 600px;
+  width: 80%;
+  border-radius: 10px;
+  padding:  10px;
+}
+
+.members-homepage table {
   width: 100%;
   border-collapse: collapse;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.body-homepage table th,
-.body-homepage table td {
+.members-homepage table th,
+.members-homepage table td {
   padding: 12px;
   border: 2px solid #0f0f0f;
   text-align: center;
   color: black;
 }
 
-.body-homepage table th {
+.members-homepage table th {
   background-color: #add8e6;
   color: black;
 }

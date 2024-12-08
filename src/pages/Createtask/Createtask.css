@@ -17,14 +17,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  background-color: #3366ff;
-  padding: 10px;
-  border-radius: 8px 8px 0 0;
-}
-
 .logo {
   height: 50px;
   margin-right: 10px;
@@ -85,5 +77,21 @@ h2 {
 }
 
 .task-form .submit-btn:hover {
+  background-color: #264d99;
+}
+
+.back-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  color: white;
+  background-color: #3366ff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-btn:hover {
   background-color: #264d99;
 }

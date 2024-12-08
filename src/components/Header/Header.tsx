@@ -32,8 +32,8 @@ const Header: React.FC<HeaderProps> = ({ inforName }) => {
   return (
     <>
         <div className="header-layout">
-          <img src="/logo.png" alt="ICON" />
-        
+          <img onClick={routeToHomepage} src="/logo.png" alt="ICON" />
+          
             <div className="infor">
               <div className="name">{inforName}</div>
               <img src="/imgp5.jpg" alt="img-profile" />

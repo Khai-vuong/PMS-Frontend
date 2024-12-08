@@ -1,0 +1,87 @@
+.mail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;/* Đảm bảo các phần tử con được căn chỉnh từ trên xuống */
+    width: 100vw;
+    height: 100vh; /* Chiều cao của toàn bộ màn hình */
+    background-color: #0056b3;
+    
+  }
+  
+  .mail-form {
+    width: 80%; /* Đặt chiều rộng của mail-form là 80% của container */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa của mail-form */
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    top: 30px;
+    background-color: #dcdbdb;
+    box-sizing: border-box;
+  }
+  
+  .mail-content {
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .mr-buttons-container {
+    position: absolute; /* Căn chỉnh tuyệt đối */
+    top: 0px; /* Khoảng cách từ trên xuống */
+    right: 10px; /* Khoảng cách từ bên phải */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Khoảng cách giữa các nút */
+  }
+  
+  .MRbutton-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .MRbutton-layout div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f1f1f1;
+  }
+  
+  /* Sử dụng Font Awesome cho các nút */
+  .search-button::before {
+    content: "\f002"; /* Icon search */
+    font-family: "FontAwesome";
+    font-size: 20px;
+    color: black;
+  }
+  
+  .approve-button::before {
+    content: "\f00c"; /* Icon check */
+    font-family: "FontAwesome";
+    font-size: 20px;
+    color: green;
+  }
+  
+  .deny-button::before {
+    content: "\f00d"; /* Icon cross */
+    font-family: "FontAwesome";
+    font-size: 20px;
+    color: red;
+  }
+  
+  /* Đổ bóng và thêm viền khi hover */
+  .MRbutton-layout div:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

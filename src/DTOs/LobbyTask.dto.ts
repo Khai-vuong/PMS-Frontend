@@ -16,7 +16,6 @@ export interface TaskDTO {
 
 export interface LobbyTaskDTO<T> {
     data: T[];
-    totalItems: number;
-    itemsPerPage: number;
+    metadata: PageMetaDTO;
     // metadata: PageMetaDTO;
 }

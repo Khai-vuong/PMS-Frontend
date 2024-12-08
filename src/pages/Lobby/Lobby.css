@@ -13,15 +13,24 @@
     width: auto;
     height: auto;
     padding: 20px;
-    margin-top: 150px;
+    /* margin-top: 350px; */
 
     display: flex;
-    background-color: brown;
+    background-color: #d9fce3;
+}
+
+.lobby-PM {
+    margin-top: 320px;
+}
+
+.lobby-member {
+    margin-top: 50px;
 }
 
 .sidebar-lobby {
-    background-color: #3f51b5;
+    background-color: #1975ff;
     color: #fff;
+    border-radius: 10px;
 
     width: 200px;
     height: auto;
@@ -43,7 +52,7 @@
 }
 
 .pm-console-lobby {
-    background-color: #3f51b5;
+    background-color: #17deac;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -59,13 +68,59 @@
     height: 100%;
     min-height: 200px;
 
-    background-color: #e3f2fd;
+    background-color: #CDC1FF;
+    border-radius: 10px;
     padding: 20px;
 }
 
 .tasklist-lobby {
-    background-color: #e8f5e9;
-    padding: 20px;
+    /* background-color: #e8f5e9; */
+    box-sizing: border-box;
+    
+    background-color: #1db3e0;
+    /* padding: 20px; */
+    padding: 30px 20px 20px 20px;
+    border-radius: 8px;
+    min-height: 450px;
+    /* overflow: auto;  */
 
-    min-height: 200px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: stretch;
+
+    ;
+
+}
+
+.taskItem-lobby {
+    box-sizing: border-box;
+
+    background-color: #FADA7A;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0; 
+
+    display: flex;
+    white-space: pre-wrap;
+}
+
+.taskItem-lobby:hover {
+    cursor: pointer;
+}
+.taskItem-lobby .name {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.taskItem-lobby .description {
+    flex: 2;
+    text-align: center;
+}
+
+.taskItem-lobby .assignee {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+
 }

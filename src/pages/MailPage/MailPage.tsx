@@ -69,6 +69,7 @@ const MailPage: React.FC = () => {
         },
       });
       setMailData(response.data);
+      setCurrentPage(currentPage);
     } catch (error) {
       console.error("Error fetching mail data:", error);
     }

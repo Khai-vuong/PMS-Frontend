@@ -25,7 +25,7 @@ const CreateProject: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const url = "http://localhost:4000/projects/create";
+    const url = rootUrl + "/projects/create";
 
     if (!token) {
       alert("You must be logged in to create a project.");

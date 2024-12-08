@@ -1,6 +1,6 @@
 import "./Projectlist.css";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProjectsListDto } from "../../../DTOs/project-list.dto"
 import Header from "../../components/Header/Header";

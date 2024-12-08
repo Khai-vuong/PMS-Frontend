@@ -23,6 +23,10 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      "@typescript-eslint/no-unused-vars": [
+          "warn", // Change to "off" to completely disable
+          { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+      ],
     },
   },
 )

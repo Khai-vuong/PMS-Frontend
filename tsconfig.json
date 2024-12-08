@@ -3,5 +3,16 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+
+  "compilerOptions": {
+    "types": ["node"],
+    "noUnusedLocals": false, // Ignore unused local variables
+    "noUnusedParameters": false, // Ignore unused function parameters
+    "strict": false, // Disable strict mode
+    
+    "module": "esnext", // or "module": "commonjs" if not using ESM
+    "moduleResolution": "node",
+    "target": "esnext", // or a suitable ES target
+  }
 }

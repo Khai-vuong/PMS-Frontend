@@ -12,7 +12,7 @@ import CreateMergePage from "./pages/Createmerge/Createmerge.tsx";
 import Lobby from "./pages/Lobby/Lobby.tsx";
 import DemoPage from "./pages/DemoPage/Demo.tsx";
 import MailPage from "./pages/MailPage/MailPage.tsx";
-import Mail from "./pages/Mail/Mail.tsx";
+// import Mail from "./pages/Mail/Mail.tsx";
 
 function App() {
   return (

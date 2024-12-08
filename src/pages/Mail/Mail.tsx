@@ -1,14 +1,14 @@
 import React from "react";
 import "./Mail.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { MailDto } from "../../../DTOs/mail.dto"
 import MRbuttons from "../../components/MR-buttons/MRbuttons";
 import Header from "../../components/Header/Header";
 
 const Mail: React.FC = () => {
   const [mails, setMails] = useState<MailDto[]>([]);
-  const [username, setUsername] = useState("User Name");
+  const [username] = useState("User Name");
   useEffect(() => {
     const mockMails: MailDto[] = [
       {

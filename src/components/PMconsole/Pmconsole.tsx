@@ -1,6 +1,5 @@
 import "./Pmconsole.css";
 import axios from "axios";
-import { authorize } from "passport";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -9,8 +8,8 @@ interface HeaderProps {
 }
 
 const Pmconsole: React.FC<HeaderProps> = ({ pid }) => {
-  const [tasks, setTasks] = useState();
-  const [displayMemberList, setDisplayMemberList] = useState(false);
+  // const [tasks, setTasks] = useState();
+  // const [displayMemberList, setDisplayMemberList] = useState(false);
   const [selectedMember, setSelectedMember] = useState("");
   const [members, setMembers] = useState([] as string[]);
 

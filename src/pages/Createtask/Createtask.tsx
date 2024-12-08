@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 
 import axios from "axios";
@@ -21,14 +21,14 @@ const CreateTask: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const rootURL = "http://localhost:4000";
 
-  const [pid, setPid] = useState(searchParams.get("pid"));
+  const [pid] = useState(searchParams.get("pid"));
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const token = localStorage.getItem("token");
-    const url = "http://localhost:4000/tasks/new";
+    const url = rootURL + "/tasks/new";
 
 
     if (!token) {

@@ -1,0 +1,13 @@
+{
+  "build": {
+    "frontend": {
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
+    }
+  },
+  "start": {
+    "frontend": {
+      "startCommand": "npm run start"
+    }
+  }
+}
